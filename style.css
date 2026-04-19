@@ -1,0 +1,102 @@
+body {
+    background-color: #f0f4f7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.main-container {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* Calculator Section */
+.calculator {
+    background-color: #f7fbff;
+    width: 320px;
+    padding: 25px;
+    border-radius: 30px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+}
+
+.display {
+    text-align: right;
+    padding: 30px 10px;
+    min-height: 100px;
+}
+
+#result { font-size: 2.8rem; color: #1a1c1e; margin: 0; }
+#history { font-size: 1.1rem; color: #74777f; min-height: 1.5em; }
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+
+.btn {
+    border: none;
+    height: 62px;
+    width: 62px;
+    border-radius: 50%;
+    font-size: 1.3rem;
+    cursor: pointer;
+    background-color: #e9eef3;
+    transition: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn:hover { filter: brightness(0.9); }
+.btn:active { transform: scale(0.95); }
+
+.action { background-color: #d3e4ff; color: #001d35; }
+.operator { background-color: #dbe2f9; color: #1a1c1e; }
+.equal { background-color: #535a73; color: white; }
+
+/* Converter Section */
+.converter {
+    background-color: #ffffff;
+    width: 320px;
+    padding: 25px;
+    border-radius: 30px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+}
+
+.converter h3 { margin-top: 0; color: #1a1c1e; margin-bottom: 20px; }
+
+.input-group {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.input-group label {
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+    color: #74777f;
+}
+
+.input-group input, .input-group select {
+    padding: 12px;
+    border-radius: 12px;
+    border: 1px solid #dbe2f9;
+    background: #f7fbff;
+    font-size: 1rem;
+    outline: none;
+}
+
+.result-box {
+    background: #d3e4ff;
+    padding: 20px;
+    border-radius: 20px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.result-box p { margin: 0; font-size: 0.9rem; color: #001d35; }
+.result-box h2 { margin: 5px 0 0; color: #001d35; font-size: 1.8rem; }
