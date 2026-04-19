@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Calculator & Currency Converter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="main-container">
+        <div class="calculator">
+            <div class="display">
+                <div id="history"></div>
+                <div id="result">0</div>
+            </div>
+            <div class="buttons">
+                <button class="btn action" onclick="clearDisplay()">AC</button>
+                <button class="btn action" onclick="appendToDisplay('(')">( )</button>
+                <button class="btn action" onclick="appendToDisplay('%')">%</button>
+                <button class="btn operator" onclick="appendToDisplay('/')">÷</button>
+
+                <button class="btn" onclick="appendToDisplay('7')">7</button>
+                <button class="btn" onclick="appendToDisplay('8')">8</button>
+                <button class="btn" onclick="appendToDisplay('9')">9</button>
+                <button class="btn operator" onclick="appendToDisplay('*')">×</button>
+
+                <button class="btn" onclick="appendToDisplay('4')">4</button>
+                <button class="btn" onclick="appendToDisplay('5')">5</button>
+                <button class="btn" onclick="appendToDisplay('6')">6</button>
+                <button class="btn operator" onclick="appendToDisplay('-')">−</button>
+
+                <button class="btn" onclick="appendToDisplay('1')">1</button>
+                <button class="btn" onclick="appendToDisplay('2')">2</button>
+                <button class="btn" onclick="appendToDisplay('3')">3</button>
+                <button class="btn operator" onclick="appendToDisplay('+')">+</button>
+
+                <button class="btn" onclick="appendToDisplay('0')">0</button>
+                <button class="btn" onclick="appendToDisplay('.')">.</button>
+                <button class="btn" onclick="backspace()">⌫</button>
+                <button class="btn equal" onclick="calculate()">=</button>
+            </div>
+        </div>
+
+        <div class="converter">
+            <h3>Currency Converter</h3>
+            <div class="input-group">
+                <label>Amount</label>
+                <input type="number" id="amount" value="1" oninput="convertCurrency()">
+            </div>
+            <div class="input-group">
+                <label>From</label>
+                <select id="fromCurrency" onchange="convertCurrency()">
+                    <option value="USD">USD - US Dollar</option>
+                    <option value="EUR">EUR - Euro</option>
+                    <option value="GBP">GBP - British Pound</option>
+                    <option value="BDT" selected>BDT - Taka</option>
+                    <option value="INR">INR - Indian Rupee</option>
+                </select>
+            </div>
+            <div class="input-group">
+                <label>To</label>
+                <select id="toCurrency" onchange="convertCurrency()">
+                    <option value="USD" selected>USD - US Dollar</option>
+                    <option value="EUR">EUR - Euro</option>
+                    <option value="GBP">GBP - British Pound</option>
+                    <option value="BDT">BDT - Taka</option>
+                    <option value="INR">INR - Indian Rupee</option>
+                </select>
+            </div>
+            <div class="result-box">
+                <p>Converted Amount:</p>
+                <h2 id="convertedValue">0.00</h2>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+                  </html>
+                  
